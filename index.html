@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>どっちが安い計算</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+                <h1>どっちが安いアプリ</h1>
+                <p>単価を計算するアプリです。</p>
+                <p>数値は3桁で入力してください。</p>
+            </header>
+
+            <main>
+                <div class="form">
+                    <form name="myForm" id="myForm" onsubmit="main(); return false;">
+                        <table id="table" class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>量</th>
+                                    <th>価格</th>
+                                    <th>単価</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>1</span>
+                                    </td>
+                                    <td>
+                                        <input type="tel" maxlength="3" pattern="[0-9]+" onkeyup="setNextFocus(this)" name="a_amount" id="a_amount" required>
+                                    </td>
+                                    <td>
+                                        <input type="tel" maxlength="3" pattern="[0-9]+" onkeyup="setNextFocus(this)" name="a_price" id="a_price" required>
+                                    </td>
+                                    <td><span id="a_unit_price"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>2</span>
+                                    </td>
+                                    <td>
+                                        <input type="tel" maxlength="3" pattern="[0-9]+" onkeyup="setNextFocus(this)" name="b_amount" id="b_amount" required>
+                                    </td>
+                                    <td>
+                                        <input type="tel" maxlength="3" pattern="[0-9]+" onkeyup="setNextFocus(this)" name="b_price" id="b_price" required>
+                                    </td>
+                                    <td><span id="b_unit_price"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="btn">
+                            <input type="submit" value="計算">
+                            <a href=""><input type="button" value="クリア"></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="result">
+                    <p id="result"></p>
+                </div>
+            </main>
+        </div>
+
+        <script src="script/main.js"></script>
+
+    </body>
+
+</html>

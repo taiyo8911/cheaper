@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+}
+
+/* アプリ全体 */
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* フォーム全体 */
+.form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* テーブル関係 */
+.form table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: solid 1px;
+    margin-bottom: 30px;
+}
+
+th {
+    border: solid 1px #767676;
+    background-color: #E2E4EA;
+    width: 80px;
+}
+
+td {
+    border: solid 1px #767676;
+}
+
+.table input {
+    padding: 5px;
+    width: 80px;
+    border: 0.5px solid;
+}
+
+th:nth-child(1) {
+    width: 40px;
+}
+
+td:nth-child(1) {
+    background-color: #E2E4EA;
+}
+
+
+/* スマホ用CSS */
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    /* タップでズームさせないために16px以上 */
+    .box input {
+        font-size: 16px;
+    }
+}
